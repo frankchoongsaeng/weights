@@ -2,12 +2,15 @@
 import { ref } from "vue";
 import { WeightData } from "../services/dataservice";
 
-defineProps<{ weightData: WeightData[] }>();
+const props = defineProps<{ weightData: WeightData[] }>();
 const unit = ref("kg");
 
 function changeUnit() {
   if (unit.value === "kg") unit.value = "lb";
   else unit.value = "kg";
+}
+function previewChart() {
+  console.log(props.weightData, "weightData");
 }
 </script>
 
@@ -30,6 +33,7 @@ function changeUnit() {
       <td>{{ weight.time }}</td>
     </tr>
   </table>
+  <button @click="previewChart">View Chart</button>
 </template>
 
 <style scoped></style>
