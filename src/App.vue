@@ -8,26 +8,35 @@ import AddWeight from "./components/AddWeight.vue";
 const weightData: Ref<WeightData[]> = ref([]);
 
 onMounted(async () => {
-  weightData.value = await getWeightData();
+    weightData.value = await getWeightData();
 });
 </script>
 
 <template>
-  <AddWeight />
-  <WeightTable :weight-data="weightData" />
+    <div class="body">
+        <AddWeight />
+        <WeightTable :weight-data="weightData" />
+    </div>
 </template>
 
 <style scoped>
+.body {
+    height: 100vh;
+    width: 100vw;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+    filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>

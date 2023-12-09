@@ -1,64 +1,68 @@
 {
-  "name": "weights-tracker",
-  "build": {
-    "dockerfile": "./Dockerfile"
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "streetsidesoftware.code-spell-checker",
-        "vue.volar",
-        "vue.vscode-typescript-vue-plugin",
-        "vue.tye",
-        "ms-azuretools.vscode-docker",
-        "techer.open-in-browser"
-      ],
-      "settings": {
-        "[dart]": {
-          "editor.formatOnSave": true,
-          "editor.formatOnType": true,
-          "editor.rulers": [80],
-          "editor.selectionHighlight": false,
-          "editor.suggest.snippetsPreventQuickSuggestions": false,
-          "editor.suggestSelection": "first",
-          "editor.tabCompletion": "onlySnippets",
-          "editor.wordBasedSuggestions": false
-        },
-        "workbench.iconTheme": "vscode-great-icons",
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnPaste": true,
-        "editor.formatOnSave": true,
-        "emmet.triggerExpansionOnTab": true,
-        "security.workspace.trust.untrustedFiles": "open",
-        "javascript.updateImportsOnFileMove.enabled": "always",
-        "bracketPairColorizer.depreciation-notice": false,
-        "editor.inlineSuggest.enabled": true,
-        "workbench.colorTheme": "Eva Dark Bold",
-        "git.ignoreRebaseWarning": true,
-        "editor.fontSize": 16,
-        "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
-        "editor.fontWeight": "100",
-        "powermode.enabled": true,
-        "files.associations": {
-          "*.vue": "vue"
-        },
-        "typescript.validate.enable": false,
-        "codemetrics.basics.EnabledForJSX": false,
-        "git.allowForcePush": true,
-        "editor.renderWhitespace": "none",
-        "window.zoomLevel": -1,
-        "redhat.telemetry.enabled": false
-      }
+    "name": "weights-tracker",
+    "build": {
+        "dockerfile": "./Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "streetsidesoftware.code-spell-checker",
+                "vue.volar",
+                "vue.vscode-typescript-vue-plugin",
+                "vue.tye",
+                "ms-azuretools.vscode-docker",
+                "techer.open-in-browser"
+            ],
+            "settings": {
+                "[dart]": {
+                    "editor.formatOnSave": true,
+                    "editor.formatOnType": true,
+                    "editor.rulers": [
+                        80
+                    ],
+                    "editor.selectionHighlight": false,
+                    "editor.suggest.snippetsPreventQuickSuggestions": false,
+                    "editor.suggestSelection": "first",
+                    "editor.tabCompletion": "onlySnippets",
+                    "editor.wordBasedSuggestions": false
+                },
+                "workbench.iconTheme": "vscode-great-icons",
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnPaste": true,
+                "editor.formatOnSave": true,
+                "emmet.triggerExpansionOnTab": true,
+                "security.workspace.trust.untrustedFiles": "open",
+                "javascript.updateImportsOnFileMove.enabled": "always",
+                "bracketPairColorizer.depreciation-notice": false,
+                "editor.inlineSuggest.enabled": true,
+                "workbench.colorTheme": "Eva Dark Bold",
+                "git.ignoreRebaseWarning": true,
+                "editor.fontSize": 16,
+                "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+                "editor.fontWeight": "100",
+                "powermode.enabled": true,
+                "files.associations": {
+                    "*.vue": "vue"
+                },
+                "typescript.validate.enable": false,
+                "codemetrics.basics.EnabledForJSX": false,
+                "git.allowForcePush": true,
+                "editor.renderWhitespace": "none",
+                "window.zoomLevel": -1,
+                "redhat.telemetry.enabled": false
+            }
+        }
+    },
+    "forwardPorts": [
+        3000
+    ],
+    "portsAttributes": {
+        "3000": {
+            "onAutoForward": "notify"
+        }
     }
-  },
-  "forwardPorts": [3000],
-  "portsAttributes": {
-    "3000": {
-      "onAutoForward": "notify"
-    }
-  }
 }
