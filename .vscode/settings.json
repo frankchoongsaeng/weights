@@ -1,8 +1,12 @@
 {
   "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', 'monospace'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.indentSize": "tabSize",
   "editor.tabSize": 2,
-  "editor.fontWeight": "100"
+  "editor.fontWeight": "300",
+  "workbench.iconTheme": "vscode-icons",
+  "window.zoomLevel": 0,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Visual Studio Dark"
 }
